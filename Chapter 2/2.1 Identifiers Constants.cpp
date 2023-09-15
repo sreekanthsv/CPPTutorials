@@ -17,6 +17,7 @@ public:
     void Beep(){
         std::cout<<beep<<std::endl;
     }
+private:    
     int Age =36;
     char Initial = 'S';
     char Name[20] = "Sreekanth";
