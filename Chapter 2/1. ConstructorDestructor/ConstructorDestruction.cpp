@@ -2,36 +2,56 @@
 #include <memory>
 #include <iostream>
 
-int main()
+int reference=0;
+dummy* pObj3 =nullptr;
+
+void create_release_scoped_dummy()
 {
-  int reference=0;
   {
-    dummy obj(++reference);
+    dummy obj1(++reference);
   }
-  std::cout<< "scope of a local objects" <<std::endl<<std::endl;
+  std::cout<< "scope of a local objects ended" <<std::endl<<std::endl;
+}
 
-
+void create_release_dynamic_dummy()
+{
   std::cout<< "creating dynamic objects" <<std::endl;
-  dummy* pObj = new dummy(++reference);
-  auto pObj2 = new dummy(++reference);
-  
-  delete pObj;
-  delete pObj2; 
-  std::cout<< "after deleting dynamically created objects" <<std::endl;
+  auto pObj2 = new dummy(++reference);  
+  delete pObj2; pObj2=nullptr;
 
+  pObj3 = new dummy(++reference);
+}
 
-
+void create_release_arrayof_dynamic_dummy()
+{
   std::cout<< "creating dynamic array objects" <<std::endl<<std::endl;
-  dummy* obj_arr = new dummy[4]{++reference,++reference,++reference,++reference};
+  dummy* obj_arr_4_7 = new dummy[4]{++reference,++reference,++reference,++reference};
 
-  delete [] obj_arr;
+  delete [] obj_arr_4_7;
   std::cout<< "after deleting dynamically created array objects" <<std::endl<<std::endl;
+}
 
 
+void create_release_objects_in_openbmc()
+{
   std::cout<< "creating objects via unique_ptr" <<std::endl;
   {
-    std::unique_ptr<dummy> p = std::make_unique<dummy>(++reference);
+    std::unique_ptr<dummy> pObj8 = std::make_unique<dummy>(++reference);
   }
   std::cout<< "dynamically created objects released after scope ended" <<std::endl<<std::endl;
+}
+int main()
+{
+
+  create_release_scoped_dummy();
+
+  create_release_dynamic_dummy();
+  delete pObj3; pObj3=nullptr;
+  std::cout<< "after deleting dynamically created objects" <<std::endl;
+
+  create_release_arrayof_dynamic_dummy();
+
+  create_release_objects_in_openbmc();
+
   return 0;
 }

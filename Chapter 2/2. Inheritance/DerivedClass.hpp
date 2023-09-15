@@ -2,7 +2,7 @@
 #define DERIVED_H
 #include "BaseClass.hpp"
 
-class DerivedClass :public  BaseClass
+class DerivedClass :public virtual BaseClass
 {
     public:
     DerivedClass() ;
