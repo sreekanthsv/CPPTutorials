@@ -3,6 +3,7 @@
 
 class Line{
     public:
+    int colour=0;
     Line() ;
     virtual ~Line();
 };

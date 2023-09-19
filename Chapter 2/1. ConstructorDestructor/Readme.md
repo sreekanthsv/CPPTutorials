@@ -2,12 +2,13 @@ This Example talks about
 
 1) How to define a simple class
 2) How to declare a object of a class
-3) when does a scoped objects gets destroyed
-4) How to dynamically create an object of a class
-5) when to release dynamically created objects of a class
-4) How to dynamically create array of objects of a class
-5) when to release dynamically created array of objects of a class
-6) How to use dynamic Memeory allocation in OpenBmc (when to variable scope is in a thread)
+3) when does a scoped objects gets destroyed  : basicaly when constructor is called and destructor is called
+4) How to dynamically create an object of a class : using new & delete
+5) when to release dynamically created objects of a class : 
+4) How to dynamically create array of objects of a class : new [] delete []
+5) when to release dynamically created array of objects of a class : 
+
+6) How to use dynamic Memeory allocation in our projects (when to variable scope is in a thread) : 
 
 
 mypc:./Inheritance

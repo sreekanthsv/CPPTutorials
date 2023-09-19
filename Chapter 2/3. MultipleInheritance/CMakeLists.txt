@@ -4,5 +4,5 @@ project(MultipleInheritance  CXX)
      
 set (CMAKE_CXX_STANDARD 17)
 
-set(SRC_FILES Line.cpp RedLine.cpp BlueLine.cpp DerivingAClass.cpp)
+set(SRC_FILES Line.cpp RedLine.cpp BlueLine.cpp Pen.cpp)
 add_executable(MultipleInheritance ${SRC_FILES})
