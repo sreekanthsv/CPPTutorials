@@ -4,7 +4,7 @@ project(parameterizedConstructor  CXX)
      
 set (CMAKE_CXX_STANDARD 17)
 
-set(SRC_FILES ReceiveDataFromConsole.cpp MyString.cpp)
+set(SRC_FILES MystringUsage.cpp MyString.cpp)
 
 add_executable(parameterizedConstructor ${SRC_FILES})
 

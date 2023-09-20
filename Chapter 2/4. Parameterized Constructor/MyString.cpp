@@ -86,8 +86,7 @@ MyString::MyString(const char Char): MyString()
 
 std::ostream& operator <<( std::ostream& os, const MyString& s )
 {
-	for (size_t i = 0 ; i < s.Size ; i++)
-        os << s.pString[i];
+    os << s.pString;
     return os;
 }
 

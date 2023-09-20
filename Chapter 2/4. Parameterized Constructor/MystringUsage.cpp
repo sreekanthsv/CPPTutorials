@@ -45,18 +45,20 @@ MyString myfunc(MyString tmp)
 int main()
 {
     using namespace std;
-    MyString s1  ;
+    MyString s1, s5 ;  // default constructor
 
-
-    MyString s2(""),s3("Hello") ;
-    MyString s4=s3, s5, s6('x'), s7("tmp");  
-
+    MyString s2(""),s3("Hello") , s6('x'), s7("tmp"); // parameterized constructor
+    MyString s4=s3  ;  //  Copy Constructor
 
     s5=s4; // assignment operator with MyString as param is called
-   
-   //  without assignment operator s5.pstring = s4.pstring, s5.size=s4.size
+    cout<<s5<<endl ;
+    cout<<s5.size()<<endl;
+    cout<<s5.length()<<endl;
+
+
+   //  without overrriding assignment operator  contents of member will become s5.pstring = s4.pstring, s5.size=s4.size
    //  delete  s4; 
-   // s4.pstring = mullptr
+   // s4.pstring = nullptr; 
    // std::cout<<s5;
    // 
 
@@ -71,9 +73,7 @@ int main()
     //s9 = s7 +s6 ; /// tmp copy constructor is created
 
 
-    cout<<s5<<endl ;
-    cout<<s5.size()<<endl;
-    cout<<s5.length()<<endl;
+
 
 }
 
