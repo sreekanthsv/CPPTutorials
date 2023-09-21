@@ -21,8 +21,10 @@ MyString::MyString(const char *pChar)
 
 MyString::MyString(const MyString& obj): MyString()
 {
-    
+     std::cout<<"Copy const called"<<std::endl;   
     Size = obj.Size;
+
+
     // pString = obj.pString; to avoid this we do below
     
     try{
@@ -90,6 +92,8 @@ std::ostream& operator <<( std::ostream& os, const MyString& s )
     return os;
 }
 
+
+
 MyString::~MyString()
 {
     if(pString == nullptr)
@@ -98,16 +102,17 @@ MyString::~MyString()
     delete [] pString;
 }
 
- MyString MyString::operator+ ( MyString& obj )
+ MyString MyString::operator+ (const MyString& obj )
  {
     size_t tmp_length = length() + obj.length(); 
     
+    std::cout<<"overload called"<<std::endl;
+
     if(tmp_length<=0)
     {
          MyString empty; 
         return empty;
     }
-
 
     char *tmp_pString = NULL;
     try{
@@ -124,7 +129,7 @@ MyString::~MyString()
     return tmp;
 }
 
-const size_t MyString::length()
+ size_t MyString::length() const
 {
     return strlen(pString);
 }
@@ -148,8 +153,9 @@ const size_t MyString::length()
 
  MyString& MyString::operator+= ( MyString& obj )
  {
-    size_t tmp_length = Size + obj.length(); 
-    
+    size_t tmp_length = length() + obj.length(); 
+
+    std::cout << "+= overloaded" << std::endl;
     if(tmp_length<=0)
     {
         return *this;
@@ -161,14 +167,16 @@ const size_t MyString::length()
         strcpy(tmp_pString,pString);
         strcat(tmp_pString,obj.pString);
         delete [] pString;
-    
-        pString= new char[tmp_length+1];
-        strcpy(pString,tmp_pString);
+        Size = tmp_length+1;
 
+        pString= new char[Size];
+        strcpy(pString,tmp_pString);
     }
     catch (const std::bad_alloc& e)
     {
         std::cout << "Allocation failed: " << e.what() << '\n';
     }
+
     return *this;
 }
+

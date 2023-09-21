@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.22)
 
-project(parameterizedConstructor  CXX)
+project(OperatorOverloading  CXX)
      
 set (CMAKE_CXX_STANDARD 17)
 
 set(SRC_FILES OperatorOverloading.cpp MyString.cpp)
 
-add_executable(parameterizedConstructor ${SRC_FILES})
+add_executable(OperatorOverloading ${SRC_FILES})
 
