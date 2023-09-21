@@ -21,6 +21,7 @@ class MyString{
 
             MyString& operator= ( const MyString& obj );
             MyString operator+ (MyString& obj );
+            MyString& operator+= (MyString& obj );
             friend std::ostream& operator<< ( std::ostream& os, const MyString& s );
 
             ~MyString();

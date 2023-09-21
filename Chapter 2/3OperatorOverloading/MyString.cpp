@@ -100,7 +100,7 @@ MyString::~MyString()
 
  MyString MyString::operator+ ( MyString& obj )
  {
-    size_t tmp_length = Size + obj.length(); 
+    size_t tmp_length = length() + obj.length(); 
     
     if(tmp_length<=0)
     {
@@ -144,3 +144,31 @@ const size_t MyString::length()
 //     cout<< "Overloading delete operator " << endl;
 //     free(p);
 // }
+
+
+ MyString& MyString::operator+= ( MyString& obj )
+ {
+    size_t tmp_length = Size + obj.length(); 
+    
+    if(tmp_length<=0)
+    {
+        return *this;
+    }
+
+    char *tmp_pString = NULL;
+    try{
+        tmp_pString= new char[tmp_length+1];
+        strcpy(tmp_pString,pString);
+        strcat(tmp_pString,obj.pString);
+        delete [] pString;
+    
+        pString= new char[tmp_length+1];
+        strcpy(pString,tmp_pString);
+
+    }
+    catch (const std::bad_alloc& e)
+    {
+        std::cout << "Allocation failed: " << e.what() << '\n';
+    }
+    return *this;
+}
