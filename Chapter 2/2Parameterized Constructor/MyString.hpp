@@ -8,6 +8,8 @@ class MyString{
       std::size_t Size=0;
 
       char *pString=nullptr; // we have pointer
+
+      
       // int filedesctiptor = -1; 
     
     public:

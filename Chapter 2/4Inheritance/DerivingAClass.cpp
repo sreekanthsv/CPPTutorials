@@ -18,11 +18,11 @@ void create_scoped_base_derived()
 
 void create_dynamic_base_derived()
 {
-  BaseClass* pObj1 = new BaseClass();
-  BaseClass* pObj2 = new DerivedClass();
+  BaseClass* pObj = new BaseClass();
+  use_release_obj(pObj);
 
-  use_release_obj(pObj2);
-  use_release_obj(pObj1);
+  pObj = new DerivedClass();
+  use_release_obj(pObj);
 
   std::cout<< "dynamically created objects released" <<std::endl<<std::endl;
 }
@@ -30,8 +30,8 @@ void create_dynamic_base_derived()
 void create_dynamic_base_derived_products()
 {
   {
-    std::unique_ptr<BaseClass> pbase = std::make_unique<BaseClass>();
-    std::unique_ptr<BaseClass> pBase2 = std::make_unique<DerivedClass>();
+    std::unique_ptr<BaseClass> pbase = std::make_unique<BaseClass>();    
+    pbase = std::make_unique<DerivedClass>();
   }
   std::cout<< "dynamically created objects released after scope ended" <<std::endl<<std::endl;
 }

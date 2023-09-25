@@ -25,3 +25,8 @@ Function call 	()
 Logical 	&,  | |, !
 Relational	>, < , = =, <=, >=
 
+
+Dynamic memory allocation,   // 
+De-allocation	New, delete  // on shared memory, named semaphores, IPC objects
+
+
