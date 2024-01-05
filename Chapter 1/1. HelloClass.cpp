@@ -16,7 +16,7 @@ int main()  // why int return type ..?
 {
     using namespace std;   // local namespacing ..?
 
-    cout<<"Hello Glider"<<endl;
+    cout<<"Hello class"<<endl;
     
 
     return 0; // what happens if not returned

@@ -26,13 +26,11 @@ void display(auto& arr )
  
 int main()
 {
-
     using namespace std; 
     int arr[] {40, 50, 60, 70, 80, 90, 100};        
     char cha_arr[] {'a','b','c','d'}; 
     
     display(arr);
-    display(cha_arr);
-    
+    display(cha_arr); 
     return 0;
 }

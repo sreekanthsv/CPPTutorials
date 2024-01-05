@@ -70,7 +70,7 @@ int main()
   create_release_arrayof_dynamic_dummy();
 
   {
-    std::unique_ptr<dummy> localptr = create_release_objects_in_openbmc();  //  RAII 
+    std::unique_ptr<dummy> localptr = create_release_objects_in_openbmc();  //  RAII to avoid deloper induced memory leaks
     
     localptr->printval();
   }
