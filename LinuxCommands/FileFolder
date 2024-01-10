@@ -1,0 +1,20 @@
+touch somefilename : Create an empty somefilename 
+vi somefilename : open somefilename to edit
+gedit somefilename : open somefilename on a graphical editor
+cat somefilename : printcontents of somefilename on to console
+more somefilename : Display content of somefilename one screen at a time
+ls : list files in currentfolder
+ls ../directory : list files in ../directory
+ls -lrt : list file and properties of a file like, size, timeof cration, permissions
+rm somefilename : remove somefilename from system
+
+mkdir somefolder : make somefolder
+rmdir somefilename : remove somefilename
+
+cp somefile1 somefile2 : copy contents of somefile1 to somefile2
+cp somefile1 somefolder/somefile1 : copy contents somefile1 to somefolder/somefile1
+cp -r somefolder somefolder2/somefolder : create a folder with name somefolder inside somefolder2 and copy the contents of somefolder and all its sub folders
+
+
+find -iname somefilename : search for files with name somefilename
+

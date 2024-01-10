@@ -1,0 +1,6 @@
+pwd : print working directory
+cd dirs   : change directory
+cd /  : go to root directory
+cd ~ : go to home directory
+cd - : go to previous directory
+cd .. : step back to parent directory 
