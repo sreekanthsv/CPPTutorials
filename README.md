@@ -1,10 +1,12 @@
 Linux Application Development Syllabus
 Topics
 Duration                                            (Hours)
-    1. Ubuntu LINUX Installation                    2
+    1. Ubuntu LINUX Installation                    3
         1.1 Installation of VM
         1.2 Ubuntu-LTE
         1.3 Linux Basic navigation commands
+        1.4 Linux Basic File & Folde Commands
+        1.5 Linux Basic Search & Find commands
     2. Setting up a development environment         1   
         2.1 Installing VS CODE/Eclipse-CDT, 
         2.2 Installing GCC, G++ GDB
@@ -45,7 +47,7 @@ Duration                                            (Hours)
         9.1  Friend functions & overloading << >>
         9.2  Arithmetic  +, - , ++
         9.3 Relational operators > <=  	
-    10.   Inheritance					            4
+    10. Inheritance					            4
         10.1 Access specifiers
         10.2 Constructors, Destructors role in inheritance
         10.3 virtual destructors
