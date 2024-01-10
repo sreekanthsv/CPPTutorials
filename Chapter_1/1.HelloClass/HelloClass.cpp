@@ -7,17 +7,17 @@
 
 int func()
 {
-    if(condition)
-        return 0;
+    //if(condition)
+      //  return 0;
 
    // ==>>  what happen when control reach here
+   return 0;
 }
 int main()  // why int return type ..?
 {
-    using namespace std;   // local namespacing ..?
+    //using namespace std;   // local namespacing ..?
 
-    cout<<"Hello class"<<endl;
-    
+    std::cout<<"Hello World"<<std::endl;    
 
     return 0; // what happens if not returned
 }

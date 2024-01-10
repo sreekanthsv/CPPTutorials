@@ -15,6 +15,3 @@ cp somefile1 somefile2 : copy contents of somefile1 to somefile2
 cp somefile1 somefolder/somefile1 : copy contents somefile1 to somefolder/somefile1
 cp -r somefolder somefolder2/somefolder : create a folder with name somefolder inside somefolder2 and copy the contents of somefolder and all its sub folders
 
-
-find -iname somefilename : search for files with name somefilename
-
