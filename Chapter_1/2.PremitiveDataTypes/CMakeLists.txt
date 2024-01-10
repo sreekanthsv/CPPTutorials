@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.22)
 
-project(HelloClass  CXX)
+project(PremitiveDataTypes  CXX)
      
 set (CMAKE_CXX_STANDARD 17)
 
-set(SRC_FILES HelloClass.cpp )
+set(SRC_FILES PremitiveDataTypes.cpp )
 
-add_executable(HelloClass ${SRC_FILES})
+add_executable(PremitiveDataTypes ${SRC_FILES})
 

@@ -1,0 +1,4 @@
+# for 64 bit Linux OS https://code.visualstudio.com/docs/setup/linux 
+# for 32 bit Linux OS https://code.visualstudio.com/updates/v1_32
+# for windows https://code.visualstudio.com/docs/setup/windows
+apt install ./<file>.deb

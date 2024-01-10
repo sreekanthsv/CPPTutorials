@@ -1,0 +1,29 @@
+# reference https://linuxconfig.org/how-to-install-g-the-c-compiler-on-ubuntu-18-04-bionic-beaver-linux
+sudo -s
+
+apt install g++
+
+apt install build-essential
+
+#apt-get install cmake 
+#apt-get install libssl-dev
+
+g++ --version
+
+gedit helloWorld.cpp
+#vi helloWorld.cpp 
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    cout << "Hello, World!";
+    return 0;
+}
+
+g++ -o hello hello.cpp
+
+./hello 
+
+
