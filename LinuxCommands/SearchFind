@@ -3,7 +3,7 @@ cat somefile | wc : count number of lines, words, bytes in the files
 cat somefile | wc -c : count number of bytes in the files
 cat somefile | wc -l : count number of lines in the files
 cat somefile | wc -w : count number of words in the files
-cmp file1 file2 : compare file1 & file 2 and print the location it differs
+cmp file1 file2 : compare file1 & file2 and print the location it differs
 diff file1 file2 : prin the difference between file1 & file2
 grep "something" file : search for occurances of something in file
 grep "something" * : search for occurances of something in all files in current folder
