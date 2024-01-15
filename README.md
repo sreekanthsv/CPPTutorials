@@ -1,5 +1,7 @@
 Linux Application Development Syllabus
+
 Topics
+
 Duration                                            (Hours)
     1. Ubuntu LINUX Installation                    3
         1.1 Installation of VM
