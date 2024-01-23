@@ -3,7 +3,7 @@ Linux Application Development Syllabus
 Topics
 
 Duration                                            (Hours)
-    1. Ubuntu LINUX Installation                    3
+    1. Ubuntu LINUX Installation                    		3
         1.1 Installation of VM
         1.2 Ubuntu-LTE
         1.3 Linux Basic navigation commands
@@ -13,23 +13,24 @@ Duration                                            (Hours)
         2.1 Installing VS CODE/Eclipse-CDT, 
         2.2 Installing GCC, G++ GDB
         2.3 Introduction to GCC, G++ GDB
-    3. Basic C++ Programming                        3
+    3. Basic C++ Programming                        		3
         3.1 Hello world Program.
         3.2 user input & user output
         3.3 Pre-Processor & comments
         3.4 for loop, looping an array in C++.
         3.5 sorting array
-    4. Command line Compiling and Linking           2
+    4. Command line Compiling and Linking           		2
         4.1 Installing CMAKE
         4.2 Compiling larger applications.
         4.3 Introduction to GDB and using GDB
-    5. Functions & Function templates		        4
-	    5.1 Functions & Function Overloading
-        5.2 Pointer pass by value & reference.
-	    5.3 Reference operator, const parameter
-	    5.4 function template 
-	    5.5 Sorting any data type example
-    6. Class                 						3
+    5. Functions & Function templates		               	6
+	5.1 Functions Overloading 
+        5.2 Function Templates
+	5.3 Vardiac Function Templates
+        5.4 Pointer pass by value & reference.
+	5.5 Reference operator, const parameter	
+	5.7 Sorting any data type example
+    6. Class                 					3
         6.1 Classes members, member functions
         6.2 Setter & getter function
         6.3 const, mutable, static members
