@@ -58,8 +58,8 @@ Duration                                            (Hours)
         10.5 Pointer to Class members
         10.6 Multiple inheritance and problems
     11. Polymorphism					            4
-	    11.1 Virtual Functions & Polymorphism
-	    11.2 Static polymorphism 
+	11.1 Virtual Functions & Polymorphism
+	11.2 Static polymorphism 
         11.3 Runtime polymorphism
         11.4 polymorphism problems
     12. Type casting & RTTI				            4
@@ -82,16 +82,16 @@ Duration                                            (Hours)
         15.1 writing your own stacks
         15.2 linked list
     16. Introduction to STL – 1 : Sequence containers	3
-	    16.1 Sequence containers & iterators
-	    16.2 array, vector bitset
-	    16.3 deque (double-ended queue)
+	16.1 Sequence containers & iterators
+	16.2 array, vector bitset
+	16.3 deque (double-ended queue)
         16.4 forward_list  singly-linked list
         16.5  List : doubly-linked 
     17. Introduction to STL – 2 Associative containers	2
-	    17.1 set
-	    17.2 map
-	    17.3 multiset
-	    17.4 multimap
+	17.1 set
+	17.2 map
+	17.3 multiset
+	17.4 multimap
     18. STL-3 : unordered associative containers 	    1
         18.1 unordered_set
         18.2 unordered_multiset
@@ -136,13 +136,13 @@ Duration                                            (Hours)
         25.4 The proc Filesystem
         25.5 Inter-Process Communication Methods
     26. Inter Process Communication			            3
-	    26.1 Methods of IPC
+	26.1 Methods of IPC
         26.2 POSIX IPC
         26.3 Shared Memory
         26.4 Semaphores
         26.5 Message Queues
     27.  Socket Programming				                2
-	    27.1 Sockets 
+	27.1 Sockets 
         27.2 Servers - Clients
         27.3 Basic Client Handshaking Sequence
 		socket(),connect(),close() and shutdown()
