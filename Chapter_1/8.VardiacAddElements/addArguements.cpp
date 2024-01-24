@@ -1,7 +1,7 @@
 // C++ program to demonstrate working of
 // Variadic function Template
 #include <iostream>
-using namespace std;
+
  
 // To handle base case of below recursive
 // Variadic function Template
@@ -21,7 +21,8 @@ T addcontents(T var1, Types... var2)
  
 int main()
 {
-    cout << addcontents(1, 2, 3)<< endl;
+    using namespace std;
+    cout << addcontents(1, 2, 3, 'c', -1, 'f')<< endl;
     cout << addcontents(1, 'c', 3)<< endl;
     cout << addcontents( 'c', 3, 'd')<< endl;
      

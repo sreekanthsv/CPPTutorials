@@ -24,11 +24,12 @@ void display(const auto& arr )
     for (const auto& element: arr)
     {
        if (typeid(element) == typeid(int))
-          std::cout <<" int "<< element << " ";   
+          std::cout<< typeid(element).name() << " " << element << " ";   
         else if (typeid(element) == typeid(char))
-          std::cout <<" char " << element << " ";     
-        else if (typeid(element) == typeid(my_struct))
-          std::cout <<" mystruct " << (((my_struct)element).value);  
+          std::cout  << typeid(element).name() << " " << element << " ";  
+
+        else if (typeid(element) == typeid(my_struct)) // tweek for certain data types 
+          std::cout <<typeid(element).name() << " " << (((my_struct)element).value);  
     }
     std::cout<<std::endl; 
 }

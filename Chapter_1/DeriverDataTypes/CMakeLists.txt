@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.22)
 
-project(ForLoopAutoKeyword  CXX)
+project(DerivedDatatypes  CXX)
      
-set (CMAKE_CXX_STANDARD 17)
+set (CMAKE_CXX_STANDARD 20)
 
-set(SRC_FILES ForLoopAutoKeyword.cpp )
+set(SRC_FILES DerivedDatatypes.cpp )
 
-add_executable(ForLoopAutoKeyword ${SRC_FILES})
+add_executable(DerivedDatatypes ${SRC_FILES})
 
