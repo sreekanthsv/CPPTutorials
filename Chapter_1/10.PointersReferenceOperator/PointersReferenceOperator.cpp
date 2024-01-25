@@ -27,6 +27,16 @@ of a class, a function parameter, or a return value. Null references are prohibi
 //   std::cout<<std::endl; 
 // }
 
+void display_viaReference( auto& arr )
+{
+  using namespace std;    
+  for ( auto& element : arr)
+  {      
+    cout <<element << " ";     
+  }
+  std::cout<<std::endl; 
+
+}
 void display_viaConst_Reference( const auto& arr )
 {
   using namespace std;    
@@ -37,15 +47,7 @@ void display_viaConst_Reference( const auto& arr )
   std::cout<<std::endl; 
 }
 
-void display_viaReference( auto& arr )
-{
-  using namespace std;    
-  for ( auto& element : arr)
-  {      
-    cout <<element << " ";     
-  }
-  std::cout<<std::endl; 
-}
+
 
 void display_viaPointer( char* arr , size_t count)
 {
@@ -60,19 +62,52 @@ void display_viaPointer( char* arr , size_t count)
   std::cout<<std::endl; 
 }
 
+void display_viaReference( char& arr )
+{
+  using namespace std;    
+  
+  {      
+    cout <<arr << " " << ++arr <<endl;   
+      
+  }
+  std::cout<<std::endl; 
+}
 
 
 int main()
 {
     char cha_arr[] {'a','b','c','d'}; 
+   
+   // std::cout <<why <<std::endl;   
     display_viaPointer(cha_arr,sizeof(cha_arr));
+    // Compile time pointer check is not there on pointers
+    display_viaPointer(NULL,sizeof(cha_arr)); 
     
+    // using namespace std; 
+    int index =0, some_thervar=1; 
+    int &Refer_index = index; //  create a reference to index 
+    // // Refer_index = &index // not allowed
+    // // Refer_index = &some_thervar; // not allowed to re-assign to another variable 
 
-    //display_viaPointer(NULL,sizeof(cha_arr));
-    //display_viaReference(cha_arr);
-    //display_viaReference(NULL);
-    //display_viaReference(std::nullptr);
-    //display_viaConst_Reference(cha_arr);
-    //sorting(cha_arr);
+
+
+    std::cout << index << " " << Refer_index <<std::endl;  // lets see both prints same values
+    index++;  // 
+
+    std::cout << index << " " << Refer_index <<std::endl; // lets see both prints same values
+
+    Refer_index++;  // 
+
+    std::cout << index << " " << Refer_index <<std::endl; // lets see both prints same values
+
+    char why = 'y';
+    display_viaReference(why);
+    display_viaReference(cha_arr);
+    display_viaConst_Reference(cha_arr);
+    // display_viaReference(NULL);
+      //  char cha_arr_aryy[] {'1','e','c','d'}; 
+    // sorting(cha_arr_aryy); // do soting of char arrays
+    // sorting(int_array)
+    // write a function template 
     return 0;
 }
