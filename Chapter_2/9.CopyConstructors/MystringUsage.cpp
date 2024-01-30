@@ -13,7 +13,7 @@ public:
    name(Name)
    
    {
-
+    // logic specific for pointers
       if( pSection)
         section = new char (*(pSection)) ; // 
       else
@@ -29,7 +29,19 @@ public:
 };
 
 // This is what a Compiler will proveide you 
-// re-write the pointer logic to meet your goals
+#if 0
+MyStudent::MyStudent(const MyStudent& obj)
+{
+  //printDetails(); // print the pre initialized valure line number 5 & 6
+  std::cout<< "copy constructor" <<std::endl;
+  StudentROllNo = obj.StudentROllNo;
+  name = obj.name;  // over writing the values
+  section = obj.section ; // 
+  printDetails();  // print new values 
+}
+#endif
+
+// we need to re-write the pointer logic to meet your goals
 MyStudent::MyStudent(const MyStudent& obj)
 {
   //printDetails(); // print the pre initialized valure line number 5 & 6
