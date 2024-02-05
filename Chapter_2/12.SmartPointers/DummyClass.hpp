@@ -3,10 +3,10 @@
 
 class dummy
 {
-    int identity=0;     // members
+    inline static int identity=0;     // members
 
     public:
-    dummy(int val) ;  // member functions
+    dummy() ;  // member functions
     virtual ~dummy(); // 
     void printval();
 };
