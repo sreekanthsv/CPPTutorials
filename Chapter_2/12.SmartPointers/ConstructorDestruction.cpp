@@ -10,7 +10,6 @@ std::unique_ptr<dummy> create_release_objects_with_smart_pointers()
                                       
     std::unique_ptr<dummy> pObj = std::make_unique<dummy>();  // create and obj dynamicall
     pObj->printval();
-    pObj.release();
     std::cout<< "before scope ends "<<std::endl;
   }  // scope ends
   
