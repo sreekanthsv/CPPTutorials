@@ -2,7 +2,8 @@
 #define BASECLASS_H
 
 class BaseClass{
-    public:
+
+public:
     BaseClass() ;
     virtual ~BaseClass();
 };
