@@ -2,7 +2,7 @@
 #define REDRefill_H
 #include "Refill.hpp"
 
-class RedRefill :public Refill
+class RedRefill :virtual public Refill
 {
     public:
     RedRefill() ;

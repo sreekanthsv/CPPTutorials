@@ -26,7 +26,7 @@ class RedPen :public RedRefill
 // void optimizeCall( void* pVoidObj)
 // {
 //   Refill* pObj =((Refill*)pVoidObj);
-//   pObj->whoAmi();
+//   pObj->whatColorAmI();
 //   pObj->Draw();
 //   std::cout<<std::endl<<std::endl;
 // }
@@ -34,7 +34,7 @@ class RedPen :public RedRefill
 void optimizeCall( Refill* pObj)
 {
   // Refill* pObj = dynamic_cast<Refill*> ((Refill*)pVoidObj);
-  pObj->whoAmi();
+  pObj->whatColorAmI();
   pObj->Draw();
   std::cout<<std::endl<<std::endl;
 }
@@ -73,32 +73,34 @@ void dynamic_factory(int selection )
     default:
       return;
   }
-  pRefill->whoAmi();
+  pRefill->whatColorAmI();
   pRefill->Draw();
   std::cout<<std::endl<<std::endl;
 
 }
 
+
+#if 0
 int main()
 {
   // Refill refill;
-  // refill.whoAmi();  refill.Draw();
+  // refill.whatColorAmI();  refill.Draw();
   // std::cout<<std::endl<<std::endl;
 
   // RedRefill redrefill;
-  // redrefill.whoAmi();redrefill.Draw();
+  // redrefill.whatColorAmI();redrefill.Draw();
   // std::cout<<std::endl<<std::endl;
 
   // BlueRefill bluerefill;
-  // bluerefill.whoAmi();bluerefill.Draw();
+  // bluerefill.whatColorAmI();bluerefill.Draw();
   // std::cout<<std::endl<<std::endl;
 
   // RedPen redpen;   
-  // redpen.whoAmi();  redpen.Draw();
+  // redpen.whatColorAmI();  redpen.Draw();
   // std::cout<<std::endl<<std::endl;
  
   // BluePen bluepen;
-  // bluepen.whoAmi(); bluepen.Draw();
+  // bluepen.whatColorAmI(); bluepen.Draw();
   // std::cout<<std::endl<<std::endl;
 
 //  factory();
@@ -143,5 +145,56 @@ int main()
   //   callAMethod(pRefill.get());
   // }
 
+  return 0;
+}
+
+#endif
+
+
+bool createPen(Refill **refill, int color)
+{
+
+  bool ret = true;
+  switch (color)
+  {
+  case 1:
+    *refill = new BlueRefill();
+    break;
+  case 2:
+    *refill = new RedRefill();
+    break;
+  case 3:
+    *refill = new RedPen();
+    break;
+  case 4:
+    *refill = new BluePen();
+    break;
+  default:
+    ret = false;
+    break;
+  }
+  return ret;
+
+}
+
+int main()
+{
+
+  Refill *refill= NULL;
+
+  int color=0;
+  std::cin>> color;
+  if ( createPen( &refill, color) !=true )
+  {
+    std::cout<< "creation failed " <<std::endl;
+    return 0;
+  }
+
+  refill->whatColorAmI();
+
+  refill->Draw();
+
+  delete refill;
+  
   return 0;
 }

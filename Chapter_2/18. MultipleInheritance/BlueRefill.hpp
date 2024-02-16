@@ -2,7 +2,7 @@
 #define BLUERefill_H
 #include "Refill.hpp"
 
-class BlueRefill :public Refill
+class BlueRefill :virtual public  Refill
 {
     public:
     BlueRefill() ;

@@ -4,10 +4,10 @@
 class Refill{
     protected:
     std::string lineColour = " Empty ";
-    public:
+public:
     Refill() ;
     virtual ~Refill();
-    void whoAmi();
+    void whatColorAmI();
     void Draw();
 };
 

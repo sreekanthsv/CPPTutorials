@@ -8,7 +8,7 @@ Refill::Refill()
 Refill::~Refill()
 {
 }
-void Refill::whoAmi()
+void Refill::whatColorAmI()
 {
     std::cout<<typeid(*this).name()<<std::endl;
 }

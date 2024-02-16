@@ -33,7 +33,7 @@ int main()
 
   BaseClass *pinstance2 = new BaseClass('D'); // construcor for pinstance2
 
-  delete pinstance2;
+ // delete pinstance2;
 
  // he will put destructor for instance1
   return 0;

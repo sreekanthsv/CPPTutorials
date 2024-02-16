@@ -5,7 +5,7 @@
 
 
 
-class MultiColourPen :public  RedRefill, public   BlueRefill
+class MultiColourPen :  public  RedRefill , public  BlueRefill
 {
     public:
     MultiColourPen() {
@@ -29,9 +29,9 @@ class MultiColourPenImpl
     void Draw(){
       ptrRefill->Draw();
     }
-    void whoAmi()
+    void whatColorAmI()
     {
-      ptrRefill->whoAmi();
+      ptrRefill->whatColorAmI();
     }
     void SelectRedLine()
     {
@@ -78,28 +78,30 @@ class MultiColourPenImpl
 //     default:
 //       return;
 //   }
-//   pRefill->whoAmi();
+//   pRefill->whatColorAmI();
 //   pRefill->Draw();
 //   std::cout<<std::endl<<std::endl;
 
 // }
 
+
+#if 0
 int main()
 {
   Refill refill;
-  refill.whoAmi();  refill.Draw();
+  refill.whatColorAmI();  refill.Draw();
   std::cout<<std::endl<<std::endl;
 
   RedRefill redrefill;
-  redrefill.whoAmi();redrefill.Draw();
+  redrefill.whatColorAmI();redrefill.Draw();
   std::cout<<std::endl<<std::endl;
 
   BlueRefill bluerefill;
-  bluerefill.whoAmi();bluerefill.Draw();
+  bluerefill.whatColorAmI();bluerefill.Draw();
   std::cout<<std::endl<<std::endl;
 
   // MultiColourPen multicolourpen;   
-  // multicolourpen.whoAmi();  multicolourpen.Draw();
+  // multicolourpen.whatColorAmI();  multicolourpen.Draw();
   // std::cout<<std::endl<<std::endl;
  
 
@@ -108,16 +110,90 @@ int main()
   
   // std::cout<<std::endl<<std::endl;
   // MultiColourPenImpl multicolourpen;   
-  // multicolourpen.whoAmi(); multicolourpen.Draw();
+  // multicolourpen.whatColorAmI(); multicolourpen.Draw();
   // std::cout<<std::endl<<std::endl;
 
   // multicolourpen.SelectBlueLine();
-  // multicolourpen.whoAmi(); multicolourpen.Draw();
+  // multicolourpen.whatColorAmI(); multicolourpen.Draw();
   // std::cout<<std::endl<<std::endl;
 
   // multicolourpen.SelectRedLine();
-  // multicolourpen.whoAmi(); multicolourpen.Draw();
+  // multicolourpen.whatColorAmI(); multicolourpen.Draw();
   // std::cout<<std::endl<<std::endl;
 
+  return 0;
+}
+
+
+#endif
+
+
+class BluePen :public BlueRefill
+{
+    public:
+    BluePen() {
+      };
+    virtual ~BluePen(){
+    };
+};
+
+class RedPen :public RedRefill
+{
+    public:
+    RedPen() {
+      };
+    virtual ~RedPen(){
+    };
+};
+
+bool createPen(Refill **refill, int color)
+{
+
+  bool ret = true;
+  switch (color)
+  {
+  case 1:
+    *refill = new BlueRefill();
+    break;
+  case 2:
+    *refill = new RedRefill();
+    break;
+  case 3:
+    *refill = new RedPen();
+    break;
+  case 4:
+    *refill = new BluePen();
+    break;
+  case 5:
+    *refill = new MultiColourPen();
+    break;
+  default:
+    ret = false;
+    break;
+  }
+  return ret;
+
+}
+
+
+int main()
+{
+
+  Refill *refill= NULL;
+
+  int color=0;
+  std::cin>> color;
+  if ( createPen( &refill, color) !=true )
+  {
+    std::cout<< "creation failed " <<std::endl;
+    return 0;
+  }
+
+  refill->whatColorAmI();
+
+  refill->Draw();
+
+  delete refill;
+  
   return 0;
 }
