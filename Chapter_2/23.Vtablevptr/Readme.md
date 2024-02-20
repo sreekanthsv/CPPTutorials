@@ -1,0 +1,1 @@
+https://www.codeproject.com/Articles/1769/ATL-Under-the-Hood-Part-1
