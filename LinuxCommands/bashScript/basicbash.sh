@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#very basic commands intro
 
 cd /
 

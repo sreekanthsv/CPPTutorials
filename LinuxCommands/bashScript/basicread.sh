@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#read from console & print o console
 
 echo " enter something"
 read read_line
